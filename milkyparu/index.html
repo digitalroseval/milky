@@ -1,79 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#111111" />
-  <title>Milky Paru</title>
-  <style>
-    :root{--bg:#0d0d0f;--card:#171719;--text:#fff;--muted:#a9a9ae;--accent:#8c5cff;--blue:#128cff}
-    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;color:var(--text)}
-    body{overflow-x:hidden}.page{min-height:100vh;max-width:760px;margin:0 auto;padding:0 18px 48px}
-    .hero{position:relative;height:360px;margin:0 -18px 0;overflow:hidden;background:#16161a}.hero img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 35%,rgba(13,13,15,.88) 100%)}
-    .profile{position:relative;z-index:1;margin-top:-38px;padding:0 6px;text-align:center}.avatar{width:116px;height:116px;margin:0 auto 12px;border-radius:50%;object-fit:cover;border:4px solid transparent;background:linear-gradient(#111,#111) padding-box,linear-gradient(135deg,#6f7cff,#9b58ff) border-box;display:block}
-    .name{font-size:34px;font-weight:800;line-height:1.05;margin:0}.verified{display:inline-grid;place-items:center;width:26px;height:26px;margin-left:6px;border-radius:50%;background:#168cff;color:#fff;font-size:16px;vertical-align:5px}.handle{margin:8px 0 0;font-size:18px;color:#ddd}.status{margin-left:8px;color:#aaa}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#8b5cf6;margin:0 7px 1px}
-    .socials{display:flex;justify-content:center;gap:12px;margin:20px 0 24px}.socials a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#151517;color:#fff;border:1px solid #242428;text-decoration:none}.socials svg{width:23px;height:23px;fill:currentColor}
-    .links{display:grid;gap:14px}.link{position:relative;display:flex;align-items:center;min-height:104px;padding:10px 18px;border-radius:22px;background:linear-gradient(180deg,#19191b,#151517);border:1px solid #202024;box-shadow:0 10px 30px rgba(0,0,0,.2);text-decoration:none;color:#fff;overflow:hidden;transition:transform .2s ease,background .2s ease}.link:active{transform:scale(.985)}.thumb{width:84px;height:84px;border-radius:50%;object-fit:cover;flex:0 0 auto}.link.onlyfans .thumb{border-radius:18px}.link-title{font-size:24px;font-weight:750;text-align:center;flex:1;padding:0 8px}.link-sub{display:block;font-size:13px;color:#aaa;font-weight:500;margin-top:3px}
-    .browser-gate{position:fixed;inset:0;z-index:100;background:rgba(8,8,10,.97);backdrop-filter:blur(9px);display:none}.browser-gate.show{display:block}.gate-inner{max-width:650px;margin:0 auto;padding:42px 24px 32px;text-align:center}.gate-arrow{position:absolute;right:22px;top:36px;font-size:76px;line-height:.8;color:#128cff;font-weight:300;filter:drop-shadow(0 0 15px rgba(18,140,255,.3))}.gate-tap{position:absolute;right:24px;top:118px;font-size:14px;letter-spacing:2px;color:#7a7a80}.gate-avatar{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid #6e5cff;margin-top:115px}.gate-name{font-size:17px;color:#bdbdc2;margin-top:22px}.gate-title{font-size:44px;line-height:1.04;font-weight:800;margin:10px 0 14px}.gate-copy{font-size:23px;line-height:1.35;color:#aaa;margin:0 auto 32px;max-width:560px}.gate-btn{display:flex;justify-content:center;align-items:center;width:100%;height:82px;border-radius:27px;background:#128cff;color:white;text-decoration:none;font-size:24px;font-weight:750;border:0;cursor:pointer;box-shadow:0 15px 40px rgba(18,140,255,.18)}.steps{margin:48px 0 0;border:1px solid #3a3a3e;border-radius:26px;padding:26px 24px;text-align:left}.step{display:flex;gap:18px;align-items:flex-start}.step+.step{margin-top:24px}.num{width:48px;height:48px;flex:0 0 auto;border-radius:50%;display:grid;place-items:center;background:#082542;color:#168cff;font-size:22px;font-weight:700}.step p{margin:4px 0 0;font-size:19px;line-height:1.4;color:#f0f0f2}.blue{color:#168cff}
-    @media(min-width:700px){.page{padding-left:26px;padding-right:26px}.hero{margin-left:-26px;margin-right:-26px}.link{min-height:112px}.thumb{width:88px;height:88px}.gate-inner{padding-top:56px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Milky Paru</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#09090b;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif}body{min-height:100vh}.page{width:min(100%,680px);margin:auto;padding-bottom:44px}.hero{position:relative;width:100%;height:min(82vw,560px);min-height:330px;overflow:hidden}.hero img{width:100%;height:100%;object-fit:cover;object-position:center}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,#09090b 100%)}.content{position:relative;margin-top:-80px;padding:0 18px;z-index:2}.avatar{display:block;width:92px;height:92px;border-radius:50%;object-fit:cover;border:3px solid #09090b;margin:0 auto 12px}.name{text-align:center;font-size:30px;font-weight:800;margin:0}.handle{text-align:center;color:#aaa;font-size:15px;margin-top:6px}.verified{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#168cff;font-size:12px;vertical-align:3px;margin-left:3px}.socials{display:flex;justify-content:center;gap:10px;margin:18px 0 24px}.socials a{width:44px;height:44px;border-radius:50%;background:#18181b;border:1px solid #29292d;display:grid;place-items:center;color:#fff}.socials svg{width:21px;height:21px;fill:currentColor}.links{display:grid;gap:16px}.card{position:relative;height:190px;border-radius:22px;overflow:hidden;display:block;text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.1);box-shadow:0 12px 35px rgba(0,0,0,.3)}.card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}.card:hover img{transform:scale(1.035)}.card:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.7),rgba(0,0,0,.08) 70%),linear-gradient(0deg,rgba(0,0,0,.48),transparent 55%)}.card-content{position:absolute;z-index:2;left:22px;bottom:20px}.card-title{font-size:27px;font-weight:800;margin:0}.card-sub{font-size:14px;color:#ddd;margin-top:4px}.arrow{position:absolute;right:20px;top:20px;z-index:3;width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,.42);display:grid;place-items:center;font-size:21px}.browser-gate{position:fixed;inset:0;z-index:99;background:#08080a;display:none;overflow:auto}.browser-gate.show{display:block}.gate-arrow{position:absolute;right:18px;top:22px;color:#168cff;font-size:70px}.gate-inner{text-align:center;padding:115px 22px 35px;max-width:650px;margin:auto}.gate-avatar{width:92px;height:92px;border-radius:50%;object-fit:cover;border:3px solid #168cff}.gate-name{color:#bbb;margin-top:14px}.gate-title{font-size:42px;margin:9px 0 10px}.gate-copy{color:#999;font-size:20px}.gate-btn{width:100%;height:68px;border:0;border-radius:20px;background:#168cff;color:#fff;font-size:20px;font-weight:700;margin-top:15px}.steps{margin-top:35px;border:1px solid #333;border-radius:22px;padding:22px;text-align:left}.step{display:flex;gap:15px;align-items:center;color:#eee}.step+.step{margin-top:20px}.num{width:40px;height:40px;border-radius:50%;background:#102d4a;color:#168cff;display:grid;place-items:center;font-weight:700;flex:none}.blue{color:#168cff}@media(min-width:700px){.hero{height:560px}.content{padding:0 28px}}
+</style>
 </head>
 <body>
-  <div id="browserGate" class="browser-gate" aria-hidden="true">
-    <div class="gate-arrow">↗</div><div class="gate-tap">TAP HERE</div>
-    <div class="gate-inner">
-      <img class="gate-avatar" src="media/2.PNG" alt="Milky Paru" />
-      <div class="gate-name">Milky Paru</div>
-      <h1 class="gate-title">Open in browser</h1>
-      <p class="gate-copy">To continue, open this page in Safari or Chrome.</p>
-      <button class="gate-btn" id="openBrowser">Open in browser</button>
-      <div class="steps">
-        <div class="step"><div class="num">1</div><p>Tap the <b>•••</b> three dots in the top right</p></div>
-        <div class="step"><div class="num">2</div><p>Tap <span class="blue">Open in Safari</span> or <span class="blue">Open in Chrome</span></p></div>
-      </div>
-    </div>
-  </div>
-
-  <main class="page" id="mainPage">
-    <section class="hero"><img src="media/1.PNG" alt="Milky Paru" /></section>
-    <section class="profile">
-      <img class="avatar" src="media/2.PNG" alt="Milky Paru" />
-      <h2 class="name">Milky Paru <span class="verified" aria-label="Verified">✓</span></h2>
-      <div class="handle">@milkyparu <span class="dot"></span><span class="status">Online</span></div>
-      <nav class="socials" aria-label="Social links">
-        <a href="https://www.instagram.com/milkyparu" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.6 6.4a1.1 1.1 0 1 1-1.1 1.1 1.1 0 0 1 1.1-1.1z"/></svg></a>
-      </nav>
-      <div class="links">
-        <a class="link" href="https://www.instagram.com/milkyparu" target="_blank" rel="noopener noreferrer">
-          <img class="thumb" src="media/2.PNG" alt="Instagram" />
-          <div class="link-title">Instagram</div>
-        </a>
-        <a class="link onlyfans" href="https://onlyfans.com/princessmilky0.0" target="_blank" rel="noopener noreferrer">
-          <img class="thumb" src="media/4.PNG" alt="OnlyFans" />
-          <div class="link-title">OnlyFans</div>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <script>
-    (function(){
-      const ua=navigator.userAgent||navigator.vendor||window.opera||'';
-      const inApp=/Instagram|FBAN|FBAV|TikTok|Twitter|X-IAB|Snapchat|Line\//i.test(ua) || (/(iPhone|iPad|iPod)/i.test(ua) && /CriOS/i.test(ua));
-      const gate=document.getElementById('browserGate');
-      const button=document.getElementById('openBrowser');
-      if(inApp){gate.classList.add('show');gate.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
-      button.addEventListener('click',function(){
-        const url=window.location.href;
-        // Best-effort external-browser launch; in-app browsers may block custom schemes.
-        if(/iPhone|iPad|iPod/i.test(navigator.userAgent)){
-          window.location.href='x-safari-https://'+url.replace(/^https?:\/\//,'');
-          setTimeout(()=>{window.location.href=url;},700);
-        }else{
-          window.open(url,'_blank','noopener,noreferrer');
-        }
-      });
-    })();
-  </script>
+<div id="gate" class="browser-gate" aria-hidden="true"><div class="gate-arrow">↗</div><div class="gate-inner"><img class="gate-avatar" src="media/2.PNG"><div class="gate-name">Milky Paru</div><h1 class="gate-title">Open in browser</h1><p class="gate-copy">To continue, open this page in Safari or Chrome.</p><button id="open" class="gate-btn">Open in browser</button><div class="steps"><div class="step"><span class="num">1</span><span>Tap the <b>•••</b> three dots in the top right</span></div><div class="step"><span class="num">2</span><span>Tap <span class="blue">Open in Safari</span> or <span class="blue">Open in Chrome</span></span></div></div></div></div>
+<main class="page"><section class="hero"><img src="media/1.PNG" alt="Milky Paru"></section><section class="content"><img class="avatar" src="media/2.PNG" alt="Milky Paru"><h1 class="name">Milky Paru <span class="verified">✓</span></h1><div class="handle">@milkyparu</div><nav class="socials"><a href="https://www.instagram.com/milkyparu" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.6 6.4a1.1 1.1 0 1 1-1.1 1.1 1.1 0 0 1 1.1-1.1z"/></svg></a></nav><div class="links"><a class="card" href="https://www.instagram.com/milkyparu" target="_blank"><img src="media/2.PNG" alt="Instagram"><span class="arrow">↗</span><div class="card-content"><h2 class="card-title">Instagram</h2><div class="card-sub">@milkyparu</div></div></a><a class="card" href="https://onlyfans.com/princessmilky0.0" target="_blank"><img src="media/4.PNG" alt="OnlyFans"><span class="arrow">↗</span><div class="card-content"><h2 class="card-title">OnlyFans</h2><div class="card-sub">Exclusive content</div></div></a></div></section></main>
+<script>(function(){const ua=navigator.userAgent||'';const inApp=/Instagram|FBAN|FBAV|TikTok|Twitter|X-IAB|Snapchat|Line\//i.test(ua);const gate=document.getElementById('gate');if(inApp){gate.classList.add('show');gate.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}document.getElementById('open').onclick=function(){const u=location.href;if(/iPhone|iPad|iPod/i.test(ua)){location.href='x-safari-https://'+u.replace(/^https?:\/\//,'');setTimeout(()=>location.href=u,800)}else{window.open(u,'_blank')}}})();</script>
 </body>
 </html>
